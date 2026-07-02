@@ -1,0 +1,51 @@
+date,order_id,product,category,region,qty,unit_price,revenue
+2026-06-26T12:00:00+00:00,1,Castrol Oil,Vehicle,Delhi,1,186.78,186.78
+2026-06-25T12:00:00+00:00,2,Castrol Oil,Vehicle,Delhi,1,171.59,171.59
+2026-06-24T12:00:00+00:00,3,Castrol Oil,Vehicle,Delhi,1,170.85,170.85
+2026-06-14T12:00:00+00:00,4,Castrol Oil,Vehicle,Indore,1,198.94,198.94
+2026-06-12T12:00:00+00:00,5,Castrol Oil,Vehicle,Indore,1,212.71,212.71
+2026-06-11T12:00:00+00:00,6,Castrol Oil,Vehicle,Indore,1,201.2,201.2
+2026-06-09T12:00:00+00:00,7,Castrol Oil,Vehicle,Indore,1,214.48,214.48
+2026-06-07T12:00:00+00:00,8,Castrol Oil,Vehicle,Kharagpur,2,167.51,335.02
+2026-06-07T12:00:00+00:00,9,Castrol Oil,Vehicle,Kharagpur,2,204.23,408.46
+2026-06-02T12:00:00+00:00,10,Castrol Oil,Vehicle,Kharagpur,1,193.61,193.61
+2026-06-01T12:00:00+00:00,11,Castrol Oil,Vehicle,Kharagpur,2,190.83,381.66
+2026-05-30T12:00:00+00:00,12,Castrol Oil,Vehicle,Kharagpur,2,186.6,373.2
+2026-06-02T12:00:00+00:01,13,Earbuds,Electronics,Bhopal,2,1000,2000
+2026-06-01T12:00:00+00:01,14,Earbuds,Electronics,Bhopal,3,2000,6000
+2026-05-30T12:00:00+00:01,15,Earbuds,Electronics,Bhopal,3,1500,4500
+2026-06-02T12:00:00+00:02,16,Earbuds,Electronics,Bhopal,3,1200,3600
+2026-06-01T12:00:00+00:02,17,Earbuds,Electronics,Kharagpur,1,1300,1300
+2026-05-30T12:00:00+00:02,18,Earbuds,Electronics,Kharagpur,4,1000,4000
+2026-06-02T12:00:00+00:03,19,Earbuds,Electronics,Kharagpur,4,1600,6400
+2026-06-01T12:00:00+00:03,20,Earbuds,Electronics,Indore,4,1700,6800
+2026-05-30T12:00:00+00:03,21,Earbuds,Electronics,Indore,5,1800,9000
+2026-06-02T12:00:00+00:04,22,Earbuds,Electronics,Indore,5,900,4500
+2026-06-01T12:00:00+00:04,23,Earbuds,Electronics,Delhi,5,600,3000
+2026-05-30T12:00:00+00:04,24,SmartPhone,Electronics,Kharagpur,2,25000,50000
+2026-06-02T12:00:00+00:05,25,SmartPhone,Electronics,Kharagpur,3,50000,150000
+2026-06-01T12:00:00+00:05,26,SmartPhone,Electronics,Kharagpur,4,10000,40000
+2026-05-30T12:00:00+00:05,27,SmartPhone,Electronics,Indore,1,100000,100000
+2026-06-02T12:00:00+00:06,28,SmartPhone,Electronics,Indore,2,20000,40000
+2026-06-01T12:00:00+00:06,29,SmartPhone,Electronics,Indore,2,30000,60000
+2026-05-30T12:00:00+00:06,30,SmartPhone,Electronics,Delhi,5,60000,300000
+2026-06-02T12:00:00+00:07,31,SmartPhone,Electronics,Kharagpur,6,50000,300000
+2026-06-01T12:00:00+00:07,32,SmartPhone,Electronics,Kharagpur,4,14000,56000
+2026-05-30T12:00:00+00:07,33,SmartPhone,Electronics,Kharagpur,2,140000,280000
+2026-06-02T12:00:00+00:08,34,SmartPhone,Electronics,Indore,3,30000,90000
+2026-06-01T12:00:00+00:08,35,SmartPhone,Electronics,Indore,1,20000,20000
+2026-05-30T12:00:00+00:08,36,SmartPhone,Electronics,Indore,5,14000,70000
+2026-06-02T12:00:00+00:09,37,SmartPhone,Electronics,Delhi,5,17000,85000
+2026-06-01T12:00:00+00:09,38,SmartPhone,Electronics,Kharagpur,4,10000,40000
+2026-05-30T12:00:00+00:09,39,SmartPhone,Electronics,Kharagpur,2,16000,32000
+2026-06-02T12:00:00+00:10,40,SmartPhone,Electronics,Kharagpur,4,19000,76000
+2026-06-01T12:00:00+00:10,41,Thar,Vehicle,Indore,3,21000,63000
+2026-05-30T12:00:00+00:10,42,Thar,Vehicle,Indore,1,22000,22000
+2026-06-02T12:00:00+00:11,43,Thar,Vehicle,Delhi,2,26000,52000
+2026-06-01T12:00:00+00:11,44,Thar,Vehicle,Kharagpur,5,1000000,5000000
+2026-05-30T12:00:00+00:11,45,Thar,Vehicle,Kharagpur,1,10000,10000
+2026-06-02T12:00:00+00:12,46,Thar,Vehicle,Kharagpur,4,60000,240000
+2026-06-01T12:00:00+00:12,47,Thar,Vehicle,Indore,8,90000,720000
+2026-05-30T12:00:00+00:12,48,Thar,Vehicle,Indore,7,35000,245000
+2026-06-02T12:00:00+00:13,49,Thar,Vehicle,Indore,6,152000,912000
+2026-06-02T12:00:00+00:14,50,Thar,Vehicle,Delhi,3,40650,121950

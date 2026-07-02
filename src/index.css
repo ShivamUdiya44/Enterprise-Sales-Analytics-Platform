@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo:wght@400;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --ink: #020617;
+    --paper: #ffffff;
+    --paper-2: #f8fafc;
+    --line: #e2e8f0;
+    --muted: #64748b;
+    --klein: #002fa7;
+    --signal: #ff2a2a;
+    --gold: #ffd700;
+}
+
+* {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    margin: 0;
+    font-family: 'IBM Plex Sans', system-ui, sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    font-feature-settings: "tnum" 1, "ss01" 1;
+}
+
+.font-display {
+    font-family: 'Chivo', sans-serif;
+    letter-spacing: -0.025em;
+}
+
+.font-mono-tab {
+    font-family: 'IBM Plex Mono', monospace;
+    font-feature-settings: "tnum" 1;
+}
+
+.overline {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+/* Swiss / brutalist hover */
+.swiss-card {
+    background: #ffffff;
+    border: 1px solid var(--line);
+    transition: transform 200ms ease, box-shadow 200ms ease;
+}
+
+.swiss-card-interactive:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--ink);
+}
+
+.tab-btn {
+    border: 1px solid var(--line);
+    background: #fff;
+    padding: 6px 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink);
+    transition: all 150ms ease;
+    cursor: pointer;
+}
+
+.tab-btn:hover {
+    background: var(--paper-2);
+}
+
+.tab-btn.active {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+}
+
+.kpi-trend-up {
+    color: #0a8754;
+}
+.kpi-trend-down {
+    color: var(--signal);
+}
+
+/* Diagonal stripes accent */
+.stripe-accent {
+    background-image: repeating-linear-gradient(
+        45deg,
+        var(--ink) 0px,
+        var(--ink) 1px,
+        transparent 1px,
+        transparent 6px
+    );
+}
+
+/* Custom select */
+select.swiss-select {
+    appearance: none;
+    background: #fff;
+    border: 1px solid var(--line);
+    padding: 8px 32px 8px 12px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink);
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path d='M0 0l5 6 5-6z' fill='%23020617'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    transition: border-color 150ms;
+}
+
+select.swiss-select:hover, select.swiss-select:focus {
+    border-color: var(--ink);
+    outline: none;
+}
+
+/* Recharts text */
+.recharts-text {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    fill: #64748b;
+}
+.recharts-cartesian-axis-tick-value {
+    font-size: 10px;
+}
+
+/* Marquee tick row */
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+.marquee {
+    animation: marquee 60s linear infinite;
+}
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@layer base {
+    :root {
+        --background: 0 0% 100%;
+        --foreground: 222 47% 4%;
+        --border: 214 32% 91%;
+        --ring: 222 47% 4%;
+        --radius: 0rem;
+    }
+}
