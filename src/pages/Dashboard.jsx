@@ -1,5 +1,5 @@
 import Header from "../components/layout/Header";
-import KpiCard from "../components/dashboard/KpiCard";
+import KpiCard from "../components/dashboard/KPICard";
 import { fmtMoney, fmtNum } from "../utils/formatters";
 import FilterBar from "../components/dashboard/FilterBar";
 import RevenueChart from "../components/dashboard/RevenueChart";
