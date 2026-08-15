@@ -1,15 +1,10 @@
 import { useMemo } from "react";
 import useSWR from "swr";
 import { API, fetcher } from "../services/api";
+import { dateRangeFromDays } from "../utils/dateRange";
 
 export default function useDashboardData(filters, granularity){
-    const dateParams = useMemo(() => {
-    const days = parseInt(filters.range, 10);
-    const end = new Date();
-    const start = new Date();
-    start.setDate(end.getDate() - days);
-    return { start_date: start.toISOString(), end_date: end.toISOString() };
-  }, [filters.range]);
+    const dateParams = useMemo(() => dateRangeFromDays(filters.range), [filters.range]);
 
   const apiParams = useMemo(() => ({
     region: filters.region,

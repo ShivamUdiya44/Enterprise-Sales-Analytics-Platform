@@ -6,6 +6,9 @@ import logging
 from pathlib import Path
 from routes.dashboard import router as dashboard_router
 from routes.upload import router as upload_router
+from routes.pnl import router as pnl_router
+from routes.employees import router as employees_router
+from routes.insights import router as insights_router
 
 ROOT_DIR = Path(__file__).parent
 load_dotenv(ROOT_DIR / '.env')
@@ -28,8 +31,11 @@ async def root():
     return {"message": "Sales Dashboard API"}
 
 api_router.include_router(dashboard_router)
-app.include_router(api_router)
 api_router.include_router(upload_router)
+api_router.include_router(pnl_router)
+api_router.include_router(employees_router)
+api_router.include_router(insights_router)
+app.include_router(api_router)
 
 app.add_middleware(
     CORSMiddleware,

@@ -1,6 +1,7 @@
 from Database.mongo import sales_collection
 from datetime import datetime, timezone, timedelta
 from collections import defaultdict
+from services.common import bucket_key, growth_pct
 
 def get_filter_options():
     regions = sorted(sales_collection.distinct("region"))
@@ -79,18 +80,12 @@ def get_kpis(
     last_rev = sum(float(o["revenue"]) for o in last_30)
     prev_rev = sum(float(o["revenue"]) for o in prev_30)
 
-    if prev_rev == 0:
-        rev_growth = 0
-    else:
-        rev_growth = ((last_rev - prev_rev) / prev_rev) * 100
+    rev_growth = growth_pct(last_rev, prev_rev)
 
     last_ord = len(last_30)
     prev_ord = len(prev_30)
 
-    if prev_ord == 0:
-        ord_growth = 0
-    else:
-        ord_growth = ((last_ord - prev_ord) / prev_ord) * 100
+    ord_growth = growth_pct(last_ord, prev_ord)
 
     return {
         "revenue": round(revenue, 2),
@@ -103,22 +98,6 @@ def get_kpis(
 
 
 
-
-
-def bucket_key(date_iso, granularity):
-    dt = datetime.fromisoformat(date_iso)
-
-    if granularity == "daily":
-        return dt.strftime("%Y-%m-%d")
-
-    if granularity == "weekly":
-        monday = dt - timedelta(days=dt.weekday())
-        return monday.strftime("%Y-W%V (%b %d)")
-
-    if granularity == "monthly":
-        return dt.strftime("%Y-%m")
-
-    return dt.strftime("%Y-%m-%d")
 
 
 def get_revenue_trend(

@@ -1,4 +1,13 @@
-import { ChartBar, ArrowRight } from "@phosphor-icons/react";
+import { NavLink } from "react-router-dom";
+import { ChartBar } from "@phosphor-icons/react";
+
+const NAV_ITEMS = [
+  { to: "/", label: "Overview" },
+  { to: "/pnl", label: "P&L" },
+  { to: "/employees", label: "Employees" },
+  { to: "/hiring", label: "Hiring" },
+  { to: "/upload", label: "Upload" },
+];
 
 export default function Header() {
   return (
@@ -13,11 +22,19 @@ export default function Header() {
             <div className="overline text-[9px]">Sales Intelligence</div>
           </div>
         </div>
-        <div className="hidden md:flex items-center gap-1 ml-6 text-xs">
-          <span className="overline">Workspace</span>
-          <ArrowRight size={12} className="text-slate-400 mx-1" />
-          <span className="font-semibold text-slate-900">Q4 / Performance Review</span>
-        </div>
+        <nav className="hidden lg:flex items-center gap-1 ml-4" data-testid="main-nav">
+          {NAV_ITEMS.map((item) => (
+            <NavLink
+              key={item.to}
+              to={item.to}
+              end={item.to === "/"}
+              className={({ isActive }) => `tab-btn ${isActive ? "active" : ""}`}
+              data-testid={`nav-${item.label.toLowerCase().replace(/[^a-z]/g, "")}`}
+            >
+              {item.label}
+            </NavLink>
+          ))}
+        </nav>
         <div className="ml-auto flex items-center gap-4">
           <div className="hidden sm:flex items-center gap-2 px-3 py-1.5 border border-slate-200">
             <span className="w-2 h-2 bg-emerald-500 animate-pulse" />

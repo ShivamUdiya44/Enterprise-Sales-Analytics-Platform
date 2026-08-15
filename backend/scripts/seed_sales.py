@@ -4,7 +4,7 @@ import os
 sys.path.append(os.path.dirname(os.path.dirname(__file__)))
 
 import pandas as pd
-from database import sales_collection
+from Database.mongo import sales_collection
 
 # Read CSV
 df = pd.read_csv("data/sales.csv")

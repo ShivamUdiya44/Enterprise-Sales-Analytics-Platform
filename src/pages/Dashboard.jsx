@@ -7,6 +7,7 @@ import CategoriesPanel from "../components/dashboard/CategoriesPanel";
 import RegionsChart from "../components/dashboard/RegionsChart";
 import TopProducts from "../components/dashboard/TopProducts";
 import RecentOrders from "../components/dashboard/RecentOrders";
+import InsightsPanel from "../components/insights/InsightsPanel";
 import { exportCSV } from "../utils/exportCSV";
 import useDashboardData from "../hooks/useDashboardData";
 
@@ -123,6 +124,7 @@ export default function Dashboard() {
           <RegionsChart data={regions} />
           <TopProducts data={topProducts} />
           <RecentOrders data={orders} />
+          <InsightsPanel filters={{ region: filters.region, category: filters.category, range: filters.range }} className="lg:col-span-4" />
         </section>
 
         {/* Footer */}
